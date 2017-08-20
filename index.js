@@ -26,7 +26,7 @@ restService.post('/echo', function(req, res) {
 
 
     return res.json({
-        speech: speech+" JAYED"+req.body.sessionId+ JSON.stringify(req.body),
+        speech: speech+" JAYED"+req.body.sessionId+ JSON.stringify(req),
         displayText: speech,
         source: 'webhook-echo-sample'
     });
