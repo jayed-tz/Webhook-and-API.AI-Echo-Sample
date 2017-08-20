@@ -18,7 +18,7 @@ restService.post('/echo', function(req, res) {
     if(req.body.result.metadata.intentName=="WelcomeIntent")
     {
         return res.json({
-            speech: "Hello "+req.body.sessionId+ JSON.stringify(req),
+            speech: "Hello "+req.body.sessionId,
             displayText:  "Hello "+req.body.sessionId,
             source: 'webhook-echo-sample'
         });
@@ -26,7 +26,7 @@ restService.post('/echo', function(req, res) {
 
 
     return res.json({
-        speech: speech+" JAYED"+req.body.sessionId,//+ JSON.stringify(req),
+        speech: speech+" JAYED"+JSON.stringify(req.body),
         displayText: speech,
         source: 'webhook-echo-sample'
     });
